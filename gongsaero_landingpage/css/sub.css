@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+*{padding: 0; margin: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+
+header,section,nav,div,ul,ol,h1,h2,h3,h4,h5,h6,footer,p,a{font-family: 'Noto Sans KR', sans-serif; color: #2a2a2a;}
+
+/* sub_header */
+#header{position: relative;}
+#header .header_inner{position: relative; height: 100px; background-color: #002863;}
+#header .header_inner h1{position: relative; top: 18px; left: 60px; width: 20%;}
+#header .gnb>ul{display: flex; position: absolute; width: 35%; height: 100px; top: 0; right: 80px;}
+#header .gnb>ul>li{width: 16.66%; min-width: 80px;}
+#header .gnb>ul>li>a{display: block; color: #fff; line-height: 100px; text-align: center;}
+#header .gnb .sub_menu{position: relative; text-align: center; display: none; background-color: #002863; padding: 20px; width: 120%; left: 50%; transform: translateX(-50%);}
+#header .gnb .sub_menu>li>a{color: #fff; line-height: 2rem;}
+#header .gnb .sub_menu>li .sub_menu_select{color: #ff6600;}
+/* sub_header */
+
+/* 모바일메뉴 */
+.mob_menu_btn{display: none;}
+.mob_menu{display: none;}
+/* 모바일메뉴 */
+
+/* footer 다른 페이지와 달라서 수정 필요! */
+#footer{position: relative; background-color: #0e1016; height: 300px;}
+#footer .footer_wrap{width: 80%; margin: 0 auto; padding-top: 100px;}
+#footer .footer_wrap p{color: #fff;}
+#footer .footer_wrap p:nth-child(2){color: #98a7b8;}
+/* footer */
+
+/* common */
+h2{color: #002863; font-size: 2rem; margin-top: 100px;}
+h3{color: #787878; font-size: 2rem;}
+/* common */
+
+/* company */
+#company{position: relative; width: 80%; margin: 0 auto;}
+#company p{margin-top: 50px;}
+#company div{border-bottom: 1px solid #787878;}
+#company div img{width: 100%; padding: 100px 0;}
+/* company */
+
+@media screen and (min-width:1080px) and (max-width:1500px){
+
+    #header .gnb>ul{width: 50%; right: 50px;}
+
+}
+
+@media screen and (max-width:1080px){
+
+}
