@@ -7,6 +7,8 @@
     <title>공새로</title>
     <link href="css/sub.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/70e925ecc3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=79aabc0100316c8866a11bcbbb871e11"></script>
 </head>
 <body>
     <!-- header -->
@@ -18,10 +20,10 @@
                     <li><a href="index.html">홈</a></li>
                     <li class="gnb_select"><a href="#">회사소개</a>
                         <ul class="sub_menu">
-                            <li><a href="company.html" class="sub_menu_select">사업영역</a></li>
+                            <li><a href="company.html">사업영역</a></li>
                             <li><a href="history.html">연혁</a></li>
                             <li><a href="vision.html">비전</a></li>
-                            <li><a href="way_to_come.html">오시는길</a></li>
+                            <li><a href="way_to_come.html" class="sub_menu_select">오시는길</a></li>
                         </ul>
                     </li>
                     <li><a href="service.html">서비스</a></li>
@@ -69,34 +71,17 @@
         </div>
     </div>
     <!-- main_visual -->
-    <section id="company">
-        <h2>사업영역</h2>
-        <h3>Our Bisness</h3>
-        <p>공새로는 기존 건자재 조달방식에서 문제점을 찾았습니다. <br>
-            기존 건자재 조달방식의 문제점을 통해 발생되는 악순환의 구조를 개선하기 위하여 공새로만의 새로운 솔루션을 제공합니다.</p>
-        <div>
-            <img src="img/structure_pc.png" alt="" class="structure">
-            <!-- <picture>
-                <source srcset="/img/structure_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/structure_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/structure_pc.png" alt=""/>
-            </picture> -->
+    <section id="way_to_come">
+        <div class="way_to_come_1">
+            <h2>오시는길</h2>
+            <h3>Way to come</h3>
+            <h4><i class="fas fa-map-marker-alt"></i>&nbsp;인천시 연수구 컨벤시아대로 204 인천스타트업파크 526호</h4>
         </div>
-        <div>
-            <img src="img/administration_pc.png" alt="" class="administration">
-            <!-- <picture>
-                <source srcset="/img/administration_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/administration_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/administration_pc.png" alt=""/>
-            </picture> -->
+        <div class="way_to_come_2">
+            <img src="img/way_to_come_img.jpg" alt="">
         </div>
-        <div>
-            <img src="img/solution_pc.png" alt="" class="solution">
-            <!-- <picture>
-                <source srcset="/img/solution_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/solution_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/solution_pc.png" alt=""/>
-            </picture> -->
+        <div id="map" class="way_to_come_3">
+            <!-- <a href="https://map.kakao.com/?urlX=420288&urlY=1080160&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank"><img width="100%" height="auto" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=420288&MY=1080160&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc"></a></div> -->
         </div>
     </section>
     <!-- footer -->
@@ -126,10 +111,10 @@
 
             //gnb slide
             $('.gnb>ul>li').mouseenter(function(){
-                $(this).find('.sub_menu').stop().slideDown(400)
+                $(this).find('.sub_menu').stop().slideDown(200)
             })
             $('.gnb>ul>li').mouseleave(function(){
-                $(this).find('.sub_menu').stop().slideUp(400)
+                $(this).find('.sub_menu').stop().slideUp(200)
             })
             $('.gnb>ul>li').focusin(function(){
                 $(this).find('.sub_menu').stop().slideDown(200)
@@ -149,18 +134,13 @@
                 }
             })
 
-            $(window).resize(function() {
-                if($(window).width() < 1080) {
-                    $('#company>div>img').eq(0).attr('src','img/structure_mob.png')
-                    $('#company>div>img').eq(1).attr('src','img/administration_mob.png')
-                    $('#company>div>img').eq(2).attr('src','img/solution_mob.png')
-                }else{
-                    $('#company>div>img').eq(0).attr('src','img/structure_pc.png')
-                    $('#company>div>img').eq(1).attr('src','img/administration_pc.png')
-                    $('#company>div>img').eq(2).attr('src','img/solution_pc.png')
-                }
+            var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+            var options = { //지도를 생성할 때 필요한 기본 옵션
+                center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+                level: 3 //지도의 레벨(확대, 축소 정도)
+            };
 
-            })
+            var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
         })
     </script>
 </body>

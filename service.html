@@ -7,6 +7,7 @@
     <title>공새로</title>
     <link href="css/sub.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/70e925ecc3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header -->
@@ -18,7 +19,7 @@
                     <li><a href="index.html">홈</a></li>
                     <li class="gnb_select"><a href="#">회사소개</a>
                         <ul class="sub_menu">
-                            <li><a href="company.html" class="sub_menu_select">사업영역</a></li>
+                            <li><a href="company.html">사업영역</a></li>
                             <li><a href="history.html">연혁</a></li>
                             <li><a href="vision.html">비전</a></li>
                             <li><a href="way_to_come.html">오시는길</a></li>
@@ -69,34 +70,66 @@
         </div>
     </div>
     <!-- main_visual -->
-    <section id="company">
-        <h2>사업영역</h2>
-        <h3>Our Bisness</h3>
-        <p>공새로는 기존 건자재 조달방식에서 문제점을 찾았습니다. <br>
-            기존 건자재 조달방식의 문제점을 통해 발생되는 악순환의 구조를 개선하기 위하여 공새로만의 새로운 솔루션을 제공합니다.</p>
+    <section id="service">
         <div>
-            <img src="img/structure_pc.png" alt="" class="structure">
-            <!-- <picture>
-                <source srcset="/img/structure_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/structure_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/structure_pc.png" alt=""/>
-            </picture> -->
+            <h2>서비스</h2>
+            <h3>Solution</h3>
         </div>
-        <div>
-            <img src="img/administration_pc.png" alt="" class="administration">
-            <!-- <picture>
-                <source srcset="/img/administration_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/administration_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/administration_pc.png" alt=""/>
-            </picture> -->
-        </div>
-        <div>
-            <img src="img/solution_pc.png" alt="" class="solution">
-            <!-- <picture>
-                <source srcset="/img/solution_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/solution_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/solution_pc.png" alt=""/>
-            </picture> -->
+        <div class="service_container">
+            <div class="service_container1">
+                <div class="service_container_img"></div>
+                <div class="service_container_text">
+                    <h4>01 간편 비교 견적</h4>
+                    <p>공새로 사용자는 건설 현장에서 원하는 조건(도착 시간, 원하는 품목, 하차비 포함 여부 등)에
+                        [간편 건자재 조달]이 가능합니다.</p>
+                    <div>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;엑셀을 이용한 견적서 간편 입력</p>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;품목 선택을 통한 정확한 건자재 지정</p>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;결재용 견적서 자동생성</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service_container2">
+                <div class="service_container_img"></div>
+                <div class="service_container_text">
+                    <h4>02 데이터 분석</h4>
+                    <p>공새로 사용자는 대시보드를 통해 한눈에 건설 현장 건자재 조달 현황(공정현황, 주문현황, 
+                        주요 알람, 추이분석 등) 파악이 가능하고, 현장 공정단계에 맞는 건자재 및
+                        건자재 품목별 패키지 추천 가이드를 통해 효율적 조달이 가능합니다. </p>
+                    <div>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;대시보드를 통한 데이터 파악 용이</p>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;추천 가이드를 통한 스마트한 조달 용이</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service_container3">
+                <div class="service_container_img"></div>
+                <div class="service_container_text">
+                    <h4>03 적시 배송</h4>
+                    <p>공새로 사용자는 현장 위치 / 품목 / 평가 기반 적시 배송 건자재 조달이 가능하고,
+                        건자재 공급업체는 현장 정보 및 자재 재고 Risk 관리가 가능합니다. </p>
+                    <div>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;현장 위치에 따른 인근 최적 공급업체 매칭</p>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;데이터 기반 품목별 경쟁력 있는 공급사 관리</p>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;현장 담당자의 자발적 평가로 공급사 동기부여 및 서비스 품질 증대</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service_container4">
+                <div class="service_container_img"></div>
+                <div class="service_container_text">
+                    <h4>04 원가 관리</h4>
+                    <p>공새로 사용자는 현장 주문 [건자재 품목별 적정 시세 모니터링],
+                        [전생애주기 건자재 투입 시기 및 비용 예측]이 가능하고, 축적 데이터 기반 [공정단계별 및
+                        용도별 패키지 추천]을 통해 맞춤형 건자재 조달을 통한 생산성 향상이 가능합니다.</p>
+                    <div>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;기술 관련 특허 3건 출원 완료</p>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;현장 맞춤형 수요 예측</p>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;건자재 품목별 시세 모니터링</p>
+                        <p><i class="fas fa-check"></i>&nbsp;&nbsp;축적 데이터 기반 추천 및 현장 리포트 산출</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- footer -->
@@ -126,10 +159,10 @@
 
             //gnb slide
             $('.gnb>ul>li').mouseenter(function(){
-                $(this).find('.sub_menu').stop().slideDown(400)
+                $(this).find('.sub_menu').stop().slideDown(200)
             })
             $('.gnb>ul>li').mouseleave(function(){
-                $(this).find('.sub_menu').stop().slideUp(400)
+                $(this).find('.sub_menu').stop().slideUp(200)
             })
             $('.gnb>ul>li').focusin(function(){
                 $(this).find('.sub_menu').stop().slideDown(200)
@@ -149,18 +182,6 @@
                 }
             })
 
-            $(window).resize(function() {
-                if($(window).width() < 1080) {
-                    $('#company>div>img').eq(0).attr('src','img/structure_mob.png')
-                    $('#company>div>img').eq(1).attr('src','img/administration_mob.png')
-                    $('#company>div>img').eq(2).attr('src','img/solution_mob.png')
-                }else{
-                    $('#company>div>img').eq(0).attr('src','img/structure_pc.png')
-                    $('#company>div>img').eq(1).attr('src','img/administration_pc.png')
-                    $('#company>div>img').eq(2).attr('src','img/solution_pc.png')
-                }
-
-            })
         })
     </script>
 </body>

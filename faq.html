@@ -7,6 +7,7 @@
     <title>공새로</title>
     <link href="css/sub.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/70e925ecc3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header -->
@@ -18,7 +19,7 @@
                     <li><a href="index.html">홈</a></li>
                     <li class="gnb_select"><a href="#">회사소개</a>
                         <ul class="sub_menu">
-                            <li><a href="company.html" class="sub_menu_select">사업영역</a></li>
+                            <li><a href="company.html">사업영역</a></li>
                             <li><a href="history.html">연혁</a></li>
                             <li><a href="vision.html">비전</a></li>
                             <li><a href="way_to_come.html">오시는길</a></li>
@@ -27,7 +28,7 @@
                     <li><a href="service.html">서비스</a></li>
                     <li><a href="#">이용안내</a>
                         <ul class="sub_menu">
-                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="faq.html" class="sub_menu_select">FAQ</a></li>
                             <li><a href="how_to_use.html">이용방법</a></li>
                             <li><a href="#">조달 프로세스</a></li>
                             <li><a href="#">데이터 활용 방법</a></li>
@@ -69,34 +70,41 @@
         </div>
     </div>
     <!-- main_visual -->
-    <section id="company">
-        <h2>사업영역</h2>
-        <h3>Our Bisness</h3>
-        <p>공새로는 기존 건자재 조달방식에서 문제점을 찾았습니다. <br>
-            기존 건자재 조달방식의 문제점을 통해 발생되는 악순환의 구조를 개선하기 위하여 공새로만의 새로운 솔루션을 제공합니다.</p>
+    <section id="faq">
         <div>
-            <img src="img/structure_pc.png" alt="" class="structure">
-            <!-- <picture>
-                <source srcset="/img/structure_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/structure_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/structure_pc.png" alt=""/>
-            </picture> -->
+            <h2>주요 질의 사항</h2>
+            <h3>FAQ</h3>
         </div>
-        <div>
-            <img src="img/administration_pc.png" alt="" class="administration">
-            <!-- <picture>
-                <source srcset="/img/administration_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/administration_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/administration_pc.png" alt=""/>
-            </picture> -->
-        </div>
-        <div>
-            <img src="img/solution_pc.png" alt="" class="solution">
-            <!-- <picture>
-                <source srcset="/img/solution_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/solution_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/solution_pc.png" alt=""/>
-            </picture> -->
+        <div class="faq_wrap">
+            <ul>
+                <li>
+                    <h4>
+                        <span>1</span> 공새로는 어떤 서비스인가요?
+                        <span class="faq_toggle">
+                        <i class="fas fa-plus"></i>
+                        </span>
+                    </h4>
+                    <div class="answer">
+                        공새로는 건자재 조달과정의 비효율성을 해결하기 위한 “건설현장 맞춤형 건자재 조달 플랫폼" 으로서 현장에서 필요로 하는 건자재 및 공구를 주변 공급업체를 통해 빠르게 견적/공급 받을 수 있고, 발주 내역에 대한 체계적 데이터 관리를 도와주는 서비스 입니다.
+                        <img src="img/faq_img2.jpg" alt="">
+                    </div>
+                </li>
+                <li class="faq_select">
+                    <h4><span>2</span> 공새로를 사용하면 무엇이 좋을까요?<span class="faq_toggle"><i class="fas fa-plus"></i></span></h4>
+                    <div class="answer">
+                        담당자에게 필요 건자재 예측 추천/건자재 리스트 업로드로 간편한 견적요청 / 견적완료 및 견적서(주문 정산서) 자동생성 /
+                            데이터 기반 생산성 보고서 제공 등 건자재 조달 과정에 투입되는 시간 및 비용을 대폭 줄일 수 있습니다.
+                        <img src="img/faq_img1.jpg" alt="">
+                        <img src="img/faq_img2.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <h4><span>3</span> 공새로 이용 중 거래에 문제가 생겼을 경우 어떻게 대처해야 하나요?<span class="faq_toggle"><i class="fas fa-plus"></i></span></h4>
+                    <div class="answer">
+                        고객센터(070-8098-8224)로 문의 주시면 빠르게 도와드리겠습니다.
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
     <!-- footer -->
@@ -126,10 +134,10 @@
 
             //gnb slide
             $('.gnb>ul>li').mouseenter(function(){
-                $(this).find('.sub_menu').stop().slideDown(400)
+                $(this).find('.sub_menu').stop().slideDown(200)
             })
             $('.gnb>ul>li').mouseleave(function(){
-                $(this).find('.sub_menu').stop().slideUp(400)
+                $(this).find('.sub_menu').stop().slideUp(200)
             })
             $('.gnb>ul>li').focusin(function(){
                 $(this).find('.sub_menu').stop().slideDown(200)
@@ -149,18 +157,22 @@
                 }
             })
 
-            $(window).resize(function() {
-                if($(window).width() < 1080) {
-                    $('#company>div>img').eq(0).attr('src','img/structure_mob.png')
-                    $('#company>div>img').eq(1).attr('src','img/administration_mob.png')
-                    $('#company>div>img').eq(2).attr('src','img/solution_mob.png')
+            // FAQ 아코디언
+            let = faqNum = 0
+            $('.faq_wrap>ul>li').click(function(){
+                
+                faqNum++
+                if(faqNum%2==1){
+                    $(this).find('.faq_toggle').html('<i class="fas fa-minus"></i>')
                 }else{
-                    $('#company>div>img').eq(0).attr('src','img/structure_pc.png')
-                    $('#company>div>img').eq(1).attr('src','img/administration_pc.png')
-                    $('#company>div>img').eq(2).attr('src','img/solution_pc.png')
+                    $(this).find('.faq_toggle').html('<i class="fas fa-plus"></i>')
                 }
+                
+                $(this).addClass('faq_select').siblings().removeClass('faq_select')
+                $(this).find('.answer').slideToggle(500)
 
             })
+
         })
     </script>
 </body>

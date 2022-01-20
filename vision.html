@@ -18,9 +18,9 @@
                     <li><a href="index.html">홈</a></li>
                     <li class="gnb_select"><a href="#">회사소개</a>
                         <ul class="sub_menu">
-                            <li><a href="company.html" class="sub_menu_select">사업영역</a></li>
+                            <li><a href="company.html">사업영역</a></li>
                             <li><a href="history.html">연혁</a></li>
-                            <li><a href="vision.html">비전</a></li>
+                            <li><a href="vision.html" class="sub_menu_select">비전</a></li>
                             <li><a href="way_to_come.html">오시는길</a></li>
                         </ul>
                     </li>
@@ -69,35 +69,14 @@
         </div>
     </div>
     <!-- main_visual -->
-    <section id="company">
-        <h2>사업영역</h2>
-        <h3>Our Bisness</h3>
-        <p>공새로는 기존 건자재 조달방식에서 문제점을 찾았습니다. <br>
-            기존 건자재 조달방식의 문제점을 통해 발생되는 악순환의 구조를 개선하기 위하여 공새로만의 새로운 솔루션을 제공합니다.</p>
-        <div>
-            <img src="img/structure_pc.png" alt="" class="structure">
-            <!-- <picture>
-                <source srcset="/img/structure_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/structure_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/structure_pc.png" alt=""/>
-            </picture> -->
-        </div>
-        <div>
-            <img src="img/administration_pc.png" alt="" class="administration">
-            <!-- <picture>
-                <source srcset="/img/administration_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/administration_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/administration_pc.png" alt=""/>
-            </picture> -->
-        </div>
-        <div>
-            <img src="img/solution_pc.png" alt="" class="solution">
-            <!-- <picture>
-                <source srcset="/img/solution_pc.png" media="all and (min-width: 1080px)">
-                <source srcset="/img/solution_mob.png" media="all and (min-width: 300px)"> 
-                <img src="img/solution_pc.png" alt=""/>
-            </picture> -->
-        </div>
+    <section id="vision">
+        <h2>비전</h2>
+        <h3>vision</h3>
+        <p>공새로는 [건자재 데이터 클라우드 및 커뮤니티] 인프라 제공을 통해 지속상생 생태계 로드맵을 만들어 나가며,
+            건설업 생산성 향상의 단초를 마련하겠습니다.<br>
+            더불어 건설 전 생애주기 중에 [시공 단계]의 [구매/조달 부분]에서 디지털 전환을 만들어 나가겠습니다.</p>
+        <img src="img/vision_img1_pc.png" alt="">
+        <img src="img/vision_img2_pc.png" alt="">
     </section>
     <!-- footer -->
     <footer id="footer">
@@ -126,10 +105,10 @@
 
             //gnb slide
             $('.gnb>ul>li').mouseenter(function(){
-                $(this).find('.sub_menu').stop().slideDown(400)
+                $(this).find('.sub_menu').stop().slideDown(200)
             })
             $('.gnb>ul>li').mouseleave(function(){
-                $(this).find('.sub_menu').stop().slideUp(400)
+                $(this).find('.sub_menu').stop().slideUp(200)
             })
             $('.gnb>ul>li').focusin(function(){
                 $(this).find('.sub_menu').stop().slideDown(200)
@@ -151,13 +130,11 @@
 
             $(window).resize(function() {
                 if($(window).width() < 1080) {
-                    $('#company>div>img').eq(0).attr('src','img/structure_mob.png')
-                    $('#company>div>img').eq(1).attr('src','img/administration_mob.png')
-                    $('#company>div>img').eq(2).attr('src','img/solution_mob.png')
+                    $('#vision>img').eq(0).attr('src','img/vision_img1_mob.png')
+                    $('#vision>img').eq(1).attr('src','img/vision_img2_mob.png')
                 }else{
-                    $('#company>div>img').eq(0).attr('src','img/structure_pc.png')
-                    $('#company>div>img').eq(1).attr('src','img/administration_pc.png')
-                    $('#company>div>img').eq(2).attr('src','img/solution_pc.png')
+                    $('#vision>img').eq(0).attr('src','img/vision_img1_pc.png')
+                    $('#vision>img').eq(1).attr('src','img/vision_img2_pc.png')
                 }
 
             })
